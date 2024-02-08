@@ -1,0 +1,326 @@
+@font-face {
+  font-family: 'Roboto-bold';
+  src: url("../assets/fonts/Roboto-Bold.ttf");
+}
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url("../assets/fonts/Roboto-Regular.ttf");
+}
+
+
+
+
+:root {
+  --primary-color: hsl(4, 100%, 67%);
+
+
+  --neutral-dark-slate-grey-color: hsl(234, 29%, 20%);
+  --neutral-charcoal-grey-color: hsl(235, 18%, 26%);
+  --neutral-grey-color: hsl(231, 7%, 60%);
+  --netural-white: hsl(0, 0%, 100%);
+
+
+  --font-size-p: 16px;
+  --font-size-h1: 32px;
+
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--neutral-charcoal-grey-color);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--neutral-charcoal-grey-color);
+  font-family: 'Roboto-Regular', sans-serif;
+}
+
+.singup_form{
+  display: block;
+  width: 800px;
+  height: 500px;
+  padding: 20px;
+  border-radius: 2rem;
+  background: white;
+
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.singup_form div:first-child{
+  padding: 10px;
+  width: 50%;
+  margin-right: 15px;
+}
+
+
+.singup_form div:first-child h1{
+  font-family: "Roboto-bold", sans-serif;
+  font-size: 3rem;
+  color: var(--neutral-charcoal-grey-color);
+  font-weight: 700;
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.singup_form div:first-child p {
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.singup_form div:first-child ul{
+  line-height: 1.5;  
+  list-style: none;  
+  margin-bottom: 2rem;
+
+}
+
+.singup_form div:first-child li{
+  list-style-image: url('./assets/images/icon-list.svg');
+}
+
+
+.singup_form div:first-child li{
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+
+.singup_form div:first-child li::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url('./assets/images/icon-list.svg');
+  background-size: cover;
+  margin-right: 10px;
+}
+
+.singup_form form label {
+  display: block;
+  font-family: "Roboto-bold", sans-serif;
+  font-size: 0.8em;
+  margin-bottom: 10px;
+  color: var(--neutral-dark-slate-grey-color);
+  font-weight: 700;
+}
+
+.singup_form form input[name="email"]{
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 12px 20px;
+  margin-bottom: 1.5rem;
+  font-family: "Roboto-bold", sans-serif;
+  border: 1px solid var(--neutral-grey-color);
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+.singup_form form input[name="email"]::placeholder {
+  color: var(--neutral-grey-color);
+}
+
+.singup_form form input[name="email"]:focus {
+  border: 1px solid var(--neutral-charcoal-grey-color);
+  color: var(--neutral-dark-slate-grey-color);
+  /* font-weight: 600; */
+}
+
+.singup_form form button[type="submit"] {
+  border: none;
+  width: 100%; 
+  background-color: var(--neutral-dark-slate-grey-color);
+  color: var(--netural-white);
+  padding: 15px;
+  border-radius: 5px;
+  font-family: "Roboto-Regular", sans-serif;
+  cursor: pointer;
+}
+
+.singup_form form button[type="submit"]:hover,
+.success div:last-child a:hover  {
+  background-color: var(--primary-color);
+  box-shadow: 0 4px 8px 0 rgba(255, 98, 87, 0.30), 0 6px 20px 0 rgba(255, 98, 87, 0.30);
+}
+
+
+.singup_form div:last-child {
+  background-image: url('./assets/images/illustration-sign-up-desktop.svg');
+  width: 45%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-left: 15px;
+} 
+
+
+/* error */
+.singup_form form.error input[name="email"]{
+  border: 1px solid var(--primary-color);
+  background-color: rgb(255, 231, 230);
+  color: var(--primary-color);
+}
+
+
+.singup_form form.error input[name="email"]::placeholder {
+  color: var(--primary-color);
+}
+
+.singup_form form div:first-child{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.singup_form form div:first-child .error-label {
+  display: none;
+  color: var(--primary-color);
+}
+
+.success {
+  width: 500px;
+  height: 500px;
+  padding: 40px;
+  border-radius: 2rem;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.success div:first-child h1 {
+  font-family: "Roboto-bold", sans-serif;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  color: var(--neutral-charcoal-grey-color);
+}
+
+.success div:first-child p span {
+  font-family: "Roboto-bold", sans-serif;
+}
+
+.success div:last-child a{
+  display: block;
+  text-align: center;
+  background-color: var(--neutral-dark-slate-grey-color);
+  color: var(--netural-white);
+  padding: 15px;
+  border-radius: 5px;
+  font-family: "Roboto-Regular", sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+
+
+/* !Mobile: 375px */
+/* !Desktop: 1440px */
+@media only screen and (max-width: 450px){
+
+  .singup_form {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+    padding: 0;
+    background-color: var(--netural-white);
+    flex-direction: column-reverse;
+  }
+
+  .singup_form div:first-child{
+    padding: 20px;
+    margin: 0;
+    width: 100%;
+    /* height: auto; */
+    }
+
+  .singup_form div:first-child h1{
+    text-align: left;
+    margin-top: 20px;
+  }
+
+  .singup_form div:first-child p{
+    font-size: 1rem;
+    /* font-weight: 500; */
+  }
+
+  .singup_form div:first-child ul{
+    font-size: 1rem;
+    margin-left: 5px;
+  }
+
+  .singup_form div:first-child li::before {
+    margin-right: 20px;
+    width: 20px;
+    height: 20px;
+  }
+
+
+  .singup_form div:last-child {
+    width: 100%;
+    height: 350px;
+    background-image: url('./assets/images/illustration-sign-up-mobile.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    border-radius: 0 0 2rem 2rem;
+  } 
+
+  .singup_form form input[name="email"]{
+    height: 60px;
+  }
+  
+  .singup_form form button[type="submit"]{
+    height: 60px;
+  }
+
+
+  /* success */
+  .success {
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    background-color: var(--netural-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 0;
+  }
+
+  .success div:first-child {
+    margin-top: 8rem;
+  }
+
+  .success div:first-child h1 {
+    font-family: "Roboto-bold", sans-serif;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    color: var(--neutral-charcoal-grey-color);
+  }
+  
+
+  .success div:last-child {
+    margin-bottom: 3rem;
+  }
+
+
+
+
+}
