@@ -22,7 +22,6 @@
 
 
   --font-size-p: 16px;
-  --font-size-h1: 32px;
 
 }
 
@@ -87,17 +86,6 @@ body {
   margin-bottom: 2rem;
 
 }
-
-.singup_form div:first-child li{
-  list-style-image: url('./assets/images/icon-list.svg');
-}
-
-
-.singup_form div:first-child li{
-  display: flex;
-  margin-bottom: 1rem;
-}
-
 
 .singup_form div:first-child li::before {
   content: '';
